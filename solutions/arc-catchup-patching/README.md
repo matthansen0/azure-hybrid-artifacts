@@ -221,29 +221,6 @@ The Function App's system-assigned Managed Identity is automatically granted the
 
 **Total idle cost: ~$0.01/month.** Cost scales linearly with the number of machines reconnecting.
 
-## Project Structure
-
-```
-arc-catchup-patching/
-├── README.md                                   # This file
-├── infra/
-│   ├── main.bicep                              # Orchestrator — deploys all modules
-│   ├── main.bicepparam                         # Parameter file
-│   └── modules/
-│       ├── function-app.bicep                  # Function App + Storage + App Insights + MI
-│       ├── action-group.bicep                  # Action Group with Function webhook
-│       ├── alert-rule.bicep                    # Resource Health alert rule
-│       └── role-assignments.bicep              # RBAC for Managed Identity
-└── function-app/
-    ├── host.json                               # Function runtime config (10 min timeout)
-    ├── requirements.psd1                       # PowerShell module dependencies
-    ├── profile.ps1                             # Managed Identity authentication
-    ├── CatchUpPatchingTrigger/
-    │   ├── function.json                       # HTTP POST trigger binding
-    │   └── run.ps1                             # Entry point — orchestrates catch-up flow
-    └── modules/
-        └── CatchUpPatching.psm1                # Core logic module
-```
 
 ## Troubleshooting
 
