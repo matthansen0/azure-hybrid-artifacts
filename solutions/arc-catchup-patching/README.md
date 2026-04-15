@@ -301,9 +301,6 @@ The current Bicep deploys role assignments scoped to the resource group containi
 
 **Mitigation:** Modify `role-assignments.bicep` to accept an array of resource group names or deploy at subscription scope.
 
-### 5. Excalidraw Architecture Diagram
-
-An Excalidraw diagram using official Microsoft Azure icons from the [msft-icons-excalidraw](https://github.com/RKrokson/msft-icons-excalidraw) library is included at [`docs/architecture.excalidraw`](docs/architecture.excalidraw) with a PNG export at [`docs/architecture.png`](docs/architecture.png). Open the `.excalidraw` file in [excalidraw.com](https://excalidraw.com) or the VS Code Excalidraw extension to edit.
 
 ## License
 
